@@ -101,8 +101,8 @@ module Flipper
         # Private: Returns error response for invalid actor value.
         def invalid_actor_value(value)
           response = {
-            status: 'error',
-            message: "#{value.inspect} is not a valid actor value.",
+            status => 'error',
+            message => "#{value.inspect} is not a valid actor value."
           }
 
           status 422
@@ -112,8 +112,8 @@ module Flipper
         # Private: Returns error response for invalid percentage value.
         def invalid_percentage(value, exception)
           response = {
-            status: 'error',
-            message: exception.message,
+            status => 'error',
+            message => exception.message,
           }
 
           status 422
@@ -123,8 +123,8 @@ module Flipper
         # Private: Returns error response that group was not registered.
         def group_not_registered(group_name)
           response = {
-            status: 'error',
-            message: "The group named #{group_name.inspect} has not been registered.",
+            status => 'error',
+            message => "The group named #{group_name.inspect} has not been registered."
           }
 
           status 404
@@ -134,8 +134,8 @@ module Flipper
         # Private: Returns error response that gate update method is not defined.
         def update_gate_method_undefined(gate_name)
           response = {
-            status: 'error',
-            message: "I have no clue how to update the gate named #{gate_name.inspect}.",
+            status => 'error',
+            message => "I have no clue how to update the gate named #{gate_name.inspect}."
           }
 
           status 404
