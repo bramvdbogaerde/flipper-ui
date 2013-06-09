@@ -2,9 +2,14 @@ require 'rack'
 require 'flipper/ui/action_collection'
 
 # Require all actions automatically.
-Flipper::UI.root.join('actions').each_child(false) do |name|
-  require "flipper/ui/actions/#{name}"
-end
+#Flipper::UI.root.join('actions').each(false) do |name|
+#  require "flipper/ui/actions/#{name}"
+#end
+require "flipper/ui/actions/gate"
+require "flipper/ui/actions/features"
+require "flipper/ui/actions/file"
+require "flipper/ui/actions/index"
+
 
 module Flipper
   module UI
